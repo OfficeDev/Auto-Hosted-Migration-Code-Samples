@@ -1,0 +1,22 @@
+﻿@model System.Collections.Generic.IEnumerable<CustomerManagerAHWeb.Models.Customer>
+
+@{
+  ViewBag.Title = "All Customers";
+}
+
+<h1>@ViewBag.Title</h1>
+
+<table>
+  <tr>
+    <th>Customer</th>
+    <th>Email</th>
+    <th></th>
+  </tr>
+  @foreach (var item in Model) {
+    <tr>
+      <td>@Html.DisplayFor(modelItem => item.FirstName) @Html.DisplayFor(modelItem => item.LastName)</td>
+      <td>@Html.DisplayFor(modelItem => item.Email)</td>
+      <td></td>
+    </tr>
+  }
+</table>

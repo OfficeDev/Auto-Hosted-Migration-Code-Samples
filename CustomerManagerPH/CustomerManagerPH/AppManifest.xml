@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--Created:cb85b80c-f585-40ff-8bfc-12ff4d0e34a9-->
+<App xmlns="http://schemas.microsoft.com/sharepoint/2012/app/manifest"
+     Name="CustomerManagerPH"
+     ProductID="{26adc3cd-b3d8-4bc8-a26e-48f9ecb8dc65}"
+     Version="1.0.0.0"
+     SharePointMinVersion="16.0.0.0"
+>
+  <Properties>
+    <Title>CustomerManagerPH</Title>
+    <StartPage>https://spahapptoph.azurewebsites.net/?{StandardTokens}</StartPage>
+  </Properties>
+
+  <AppPrincipal>
+    <RemoteWebApplication ClientId="6f03f677-5ca1-4bbf-a171-89981f3f58fd" />
+  </AppPrincipal> 
+</App>

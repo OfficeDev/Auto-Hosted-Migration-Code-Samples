@@ -1,0 +1,54 @@
+﻿@using System
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=10" />
+  <title>@ViewBag.Title - My ASP.NET Application</title>
+  @Scripts.Render("~/bundles/modernizr")
+  @Scripts.Render("~/bundles/jquery")
+
+  <script src="@ViewBag.SPHostUrl/_layouts/15/sp.ui.controls.js"></script>
+  <script type="text/javascript">
+    jQuery(document).ready(function () {
+      var chromeControlSettings = {
+        siteTitle: "Parent Site",
+        appTitle: "Customer Management App",
+        settingsLinks: [
+          { linkUrl: '@Url.Action("Index")', displayName: "Home" },
+          { linkUrl: '@Url.Action("Contact","About")', displayName: "About" }
+        ]
+      };
+
+      // create the chrome control
+      var chromeControl = new SP.UI.Controls.Navigation("chrome_ctrl_container", chromeControlSettings);
+
+      // show control
+      chromeControl.setVisible(true);
+    });
+</script>
+</head>
+<body>
+  <div id="chrome_ctrl_container"></div>
+  <div class="navbar">
+    <div class="container">
+      <ul class="nav navbar-nav">
+        <li>@Html.ActionLink("View All Customers", "Index", "Home")</li>
+        <li>@Html.ActionLink("Create Customer", "Create", "Customer")</li>
+      </ul>
+    </div>
+  </div>
+  <div>
+    @RenderBody()
+    <hr />
+    <footer>
+      <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+    </footer>
+  </div>
+
+  @Scripts.Render("~/bundles/bootstrap")
+  @Scripts.Render("~/bundles/spcontext")
+  @RenderSection("scripts", required: false)
+</body>
+</html>
