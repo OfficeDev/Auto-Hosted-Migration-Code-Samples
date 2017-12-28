@@ -10,3 +10,6 @@ This solution contains a working SharePoint autohosted app that can be deployed 
 
 ##CustomerManagerPH
 This solution is a copy of the *CustomerManagerAH* solution except it has been modified using the above mentioned white paper.
+
+
+This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/). For more information, see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
