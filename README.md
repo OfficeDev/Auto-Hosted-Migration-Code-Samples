@@ -1,3 +1,13 @@
+---
+topic: sample
+products:
+- Office 365
+languages:
+- C#
+extensions:
+  contentType: samples
+  createdDate: 5/7/2014 3:22:40 AM
+---
 Auto-Hosted-Migration-Code-Samples
 ==================================
 
